@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Job Search</title>
+    <style>
+        .category-container {
+            display: flex;
+
+            justify-content: left;
+        }
+
+        .category-card {
+            margin: 10px;
+            border: 2px solid black;
+            width: 150;
+            height: 200;
+            padding: 20PX;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Job Search</h1>
+    </div>
+
+    <div>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+            <li><a href="sign up.html">Sign up</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="posted jobs.html">Posted Jobs</a></li>
+            <li><a href="add job phase_1.html">Post new Job</a></li>
+            <li><a href="Applied Jobs.html">Applied Job</a></li>
+            <li><a href="job_list.html">Job List</a></li>
+
+        </ul>
+    </div>
+
+    <div>
+        <h2>Welcome to our Job Search Website</h2>
+        <p>Find your dream job today!</p>
+        <form action="/search" method="GET">
+            <select name="category">
+                <option value="all">All Categories</option>
+                <option value="design">Design</option>
+                <option value="sw development">Software Development</option>
+                <option value="accounting">Accounting</option>
+                <option value="engineering">Engineering</option>
+                <option value="it">IT</option>
+                <option value="content writing">Content Writing</option>
+            </select>
+            <input type="text" name="job-name" placeholder="Enter job name">
+            <button onclick="window.location.href='job_list.html'">Search</button>
+        </form>
+    </div>
+
+    <div>
+        <h2>Check Different Categories</h2>
+        <div class="category-container">
+            <div class="category-card">
+                <div class="category-logo">
+                    <img src="../images\design.png" alt="" width="50px" height="50px">
+                </div>
+                <h3 class="category-name">Design</h3>
+                <a href="job_list.html" class="browse-jobs-link" style="text-decoration: none;">Browse Jobs</a>
+            </div>
+
+            <div class="category-card">
+                <div class="category-logo">
+                    <img src="../images\software_development.png" alt="" width="50px" height="50px">
+                </div>
+                <h3 class="category-name">Software Development</h3>
+                <a href="job_list.html" class="browse-jobs-link" style="text-decoration: none;">Browse Jobs</a>
+            </div>
+
+            <div class="category-card">
+                <div class="category-logo">
+                    <img src="../images\accounting.png" alt="" width="50px" height="50px">
+                </div>
+                <h3 class="category-name">Accounting</h3>
+                <a href="job_list.html" class="browse-jobs-link" style="text-decoration: none;">Browse Jobs</a>
+            </div>
+
+            <div class="category-card">
+                <div class="category-logo">
+                    <img src="../images\engineer.png" alt="" width="50px" height="50px">
+                </div>
+                <h3 class="category-name">Engineering</h3>
+                <a href="job_list.html" class="browse-jobs-link" style="text-decoration: none;">Browse Jobs</a>
+            </div>
+
+            <div class="category-card">
+                <div class="category-logo">
+                    <img src="../images\technical-support.png" alt="" width="50px" height="50px">
+                </div>
+                <h3 class="category-name">Information Technology</h3>
+                <a href="job_list.html" class="browse-jobs-link" style="text-decoration: none;">Browse Jobs</a>
+            </div>
+
+            <div class="category-card">
+                <div class="category-logo">
+                    <img src="../images\content-writing.png" alt="" width="50px" height="50px">
+                </div>
+                <h3 class="category-name">Content Writing</h3>
+                <a href="job_list.html" class="browse-jobs-link" style="text-decoration: none;">Browse Jobs</a>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <h2>Latest Jobs</h2>
+        <div style="border:1px solid black ; width:700px; padding :20px; margin: 20px;">
+
+            <div style="float: left;">
+                <img src="WebApplication2/136094358_3526234100934508_8762019712824220874_n.jpg" width="100"
+                    height="100" />
+                <p> Creative Canvas </p>
+            </div>
+
+            <div style="border:1px; padding-left:120px;">
+                <b style="font-size:x-large;">creative art designer </b>
+                &nbsp;&nbsp;&nbsp;
+                <button onclick="window.location.href='JobDetails.html'">Apply</button>
+
+
+                <br /> Location: New York City, USA
+                <br />
+                <br />
+                We are looking for a talented and creative Art Designer to join our team. As an Art Designer, you will
+                be
+                responsible for creating visually stunning graphics,
+                illustrations, and designs that communicate our brand message effectively.
+                <p style="font-size:large;"> Job Summary : Full Time | 2+ Years Experience </p>
+                <p style="font-size:large;"> Salary: $55,000 - $70,000 per year.</p>
+            </div>
+
+        </div>
+        <div style="border:1px solid black ; width:700px; padding :20px; margin: 20px;">
+
+            <div style="float: left;">
+                <img src="WebApplication2/136094358_3526234100934508_8762019712824220874_n.jpg" width="100"
+                    height="100" />
+                <p> Creative Canvas </p>
+            </div>
+
+            <div style="border:1px; padding-left:120px;">
+                <b style="font-size:x-large;">creative art designer </b>
+                &nbsp;&nbsp;&nbsp;
+                <button onclick="window.location.href='JobDetails.html'">Apply</button>
+
+
+                <br /> Location: New York City, USA
+                <br />
+                <br />
+                We are looking for a talented and creative Art Designer to join our team. As an Art Designer, you will
+                be
+                responsible for creating visually stunning graphics,
+                illustrations, and designs that communicate our brand message effectively.
+                <p style="font-size:large;"> Job Summary : Full Time | 2+ Years Experience </p>
+                <p style="font-size:large;"> Salary: $55,000 - $70,000 per year.</p>
+            </div>
+
+        </div>
+        <div style="border:1px solid black ; width:700px; padding :20px; margin: 20px;">
+
+            <div style="float: left;">
+                <img src="WebApplication2/136094358_3526234100934508_8762019712824220874_n.jpg" width="100"
+                    height="100" />
+                <p> Creative Canvas </p>
+            </div>
+
+            <div style="border:1px; padding-left:120px;">
+                <b style="font-size:x-large;">creative art designer </b>
+                &nbsp;&nbsp;&nbsp;
+                <button onclick="window.location.href='JobDetails.html'">Apply</button>
+
+
+                <br /> Location: New York City, USA
+                <br />
+                <br />
+                We are looking for a talented and creative Art Designer to join our team. As an Art Designer, you will
+                be
+                responsible for creating visually stunning graphics,
+                illustrations, and designs that communicate our brand message effectively.
+                <p style="font-size:large;"> Job Summary : Full Time | 2+ Years Experience </p>
+                <p style="font-size:large;"> Salary: $55,000 - $70,000 per year.</p>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
