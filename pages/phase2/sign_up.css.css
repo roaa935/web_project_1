@@ -1,0 +1,49 @@
+body{
+    background-color: rgb(246, 246, 246);
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    height: 100% ;
+
+}
+fieldset{
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border: 2px solid #1b1717;
+    border-radius: 10px;
+    background-color: rgb(124, 140, 205);
+    
+}
+form{
+    background-color: rgb(201, 150, 217);
+   
+
+}
+input[type="submit"] {
+    
+    background-color: #1B1A55;
+    color: #fafffd;
+    outline: none ;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px ;
+ } 
+
+ form input {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    outline: none ;
+
+    padding: 5px 10px ;
+    flex-basis:200px ;
+
+ }
+ 
+
+
+
+

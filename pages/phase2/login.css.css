@@ -1,0 +1,66 @@
+body{
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    height: 100% ;
+
+}
+fieldset {
+    
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    border: 2px solid #bc5a5a;
+    border-radius: 10px;
+    background-color: rgb(80, 107, 214);
+    
+}
+
+#centeredText {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+form{
+    background-color: rgb(196, 179, 201);
+   
+}
+ form input {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    outline: none ;
+
+    padding: 5px 10px ;
+    flex-basis:200px ;
+
+ }
+ form button {
+    background-color: #1B1A55;
+    color: beige;
+    outline: none ;
+    border: none;
+    cursor: pointer;
+    
+    padding: 5px 10px ;
+ } 
+ input[type="submit"] {
+    background-color: #1B1A55;
+    color: #fafffd;
+    outline: none ;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px ;
+ } 
+
+fieldset{
+    border: none;
+    outline: none ;
+   
+    margin: 0 auto; /* توسيط الـ fieldset بشكل أفقي */
+    
+    padding: 20px;
+    
+}
