@@ -3,6 +3,8 @@
 
 <head>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="../styles/sign_up.css">
+  <script src="../scripts/sign_up.js"></script>
   <title>Sign Up </title>
 </head>
 
@@ -13,13 +15,15 @@
       <legend>
         <h2>Sign Up</h2>
       </legend>
+
       <div>
         <label for="email">Email</label>
         <input id="email" type="email" required>
       </div><br>
+
       <div>
-        <label for="user name ">User Name </label>
-        <input id="user name " type="text" required>
+        <label for="name">Name </label>
+        <input id="name" type="text" required>
       </div><br>
 
       <div>
@@ -29,45 +33,47 @@
 
 
       <div>
-        <label for="conferm password ">Conferm Password </label>
-        <input id="conferm password " type="password" required>
+        <label for="confirm-password">Conferm Password </label>
+        <input id="confirm-password" type="password" required>
       </div> <br>
 
 
-      <h2> Create account As </h2>
+      <h2> Create Account As </h2>
       <div>
-        <input id="company admin" type="radio" value=" company admin" name="m">
-        <label for="company admin">Company Admin</label>
-        <input id="regular user " type="radio" value="regular user" name="m">
-        <label for="regular user ">Regular User</label>
-      </div> <br>
-
-      <div>
-        <label for="company name ">Company Name </label>
-        <input id="company name " type="text" value="">
-        <br><br>
-
-        <label for="company address ">Company Address </label>
-        <input id="company address " type="text" value="">
-        <br><br>
-
-        <label for="company email ">Company Email </label>
-        <input id="company email " type="text" value="">
-        <br><br>
-
-        <label for="company Phone ">Company Phone </label>
-        <input id="company Phone " type="text" value="">
-        <br><br>
-
-        <label for="Describtion">Company Description</label><br>
-        <textarea id="job_description" name="job_description" rows="4" cols="50" required
-          placeholder="Company description"></textarea>
-      </div>
-
-      <div><br>
-
-        <input type="submit" value="sign up ">
+        <label>
+          <input type="radio" name="userType" value="regular" checked>
+          Regular User
+        </label>
+        <label>
+          <input type="radio" name="userType" value="admin" id="userTypeAdmin">
+          Company Admin
+        </label>
       </div><br>
+
+      <div id="companyInfoFields" style="display: none;">
+        <label for="company-name">Company Name </label>
+        <input id="company-name" type="text" value="">
+        <br><br>
+
+        <label for="company-address">Company Address </label>
+        <input id="company-address" type="text" value="">
+        <br><br>
+
+        <label for="company-email">Company Email </label>
+        <input id="company-email" type="text" value="">
+        <br><br>
+
+        <label for="company-phone">Company Phone </label>
+        <input id="company-phone" type="text" value="">
+        <br><br>
+
+        <label for="company-description">Company Description</label><br>
+        <textarea id="company-description" name="company-description" rows="4" cols="50"
+          placeholder="Company description"></textarea>
+      </div><br>
+
+      <input type="submit" value="sign up" id="signUp-btn">
+      <br>
 
       <p>Already have account? <a href="login.html">Sign In</a></p>
     </fieldset>

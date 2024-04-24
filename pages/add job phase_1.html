@@ -2,31 +2,38 @@
 <html lang="en">
 
 <head>
-    <title>Add New Job</title>
+    <title>Add Job</title>
+    <link rel="stylesheet" type="text/css" href="../styles/add_edit_job.css">
+    <script src="../scripts/add_job.js" defer></script>
 </head>
 
 <body>
-    <h1>Add New Job</h1>
-    <form action="/submit_job" method="POST">
-        <label for="job_title">Job Title:</label><br>
-        <input type="text" id="job_title" name="job_title" required><br><br>
+    <h1>Add Job</h1>
+    <form id="addJobForm">
+        <label for="jobTitle">Job Title:</label>
+        <input type="text" id="jobTitle" name="jobTitle" placeholder="eg. Full Stack" required><br>
 
-        <label for="company_name">Company Name:</label><br>
-        <input type="text" id="company_name" name="company_name" required><br><br>
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" placeholder="eg. New York City" required><br>
 
-        <label for="job_description">Job Description:</label><br>
-        <textarea id="job_description" name="job_description" rows="4" cols="50" required></textarea><br><br>
+        <label for="jobLevel">Job Level:</label>
+        <input type="text" id="jobLevel" name="jobLevel" placeholder="eg. Junior, Senior" required><br>
 
-        <label for="location">Location:</label><br>
-        <input type="text" id="location" name="location" required><br><br>
+        <label for="jobType">Job Type:</label>
+        <input type="text" id="jobType" name="jobType" placeholder="eg. Full Tyme" required><br>
 
-        <label for="Job_summary">Job Summary:</label><br>
-        <input type="text" id="Job_summary" name="Job_summary" required><br><br>
+        <label for="jobCategory">Job Category</label>
+        <input type="text" id="jobCategory" name="jobCategory" placeholder="e.g Design, IT" required><br>
 
-        <label for="salary">Salary:</label><br>
-        <input type="text" id="salary" name="salary"><br><br>
+        <label for="salary">Salary:</label>
+        <input type="text" id="salary" name="salary" required><br>
 
-        <input type="submit" value="post">
+
+        <label for="jobDescription">Job Description:</label><br>
+        <textarea id="jobDescription" name="jobDescription" rows="4" cols="50" required></textarea><br>
+
+
+        <button type="submit" id="add-button">Add Job</button>
     </form>
 </body>
 

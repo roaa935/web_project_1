@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <link rel="stylesheet" href="../styles/user.css">
+
+  <script src="../scripts/user.js" defer></script>
+</head>
+
+
+<body>
+  <header class="header"></header>
+  <a href="#" class="logo">job search</a>
+  <div class="navbar">
+    <a href="UserHome.html">Home</a>
+    <a href="sign up.html">Sign Up</a>
+    <a href="login.html">Login</a>
+    <a href="job_list.html" id="jobListLink">Job List</a>
+    <a href="Applied Jobs.html">Applied Jobs</a>
+  </div>
+
+  <div class="content">
+    <h2>Welcome to our Job Search Website</h2>
+    <p>Find your dream job today!</p>
+    <select id="job-level" name="job-level">
+      <option value="Entry">Entry-Level</option>
+      <option value="junior">Junior</option>
+      <option value="Mid-level">Mid-level</option>
+      <option value="senior">Senior</option>
+      <option value="Expert">ُExpert</option>
+      <option value="Excutive">Excutive</option>
+    </select>
+    <input type="text" id="job-title" name="job-title" placeholder="Enter job title">
+    <button id="search-btn">Search</button>
+  </div>
+</body>
+
+</html>
