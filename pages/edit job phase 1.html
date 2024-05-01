@@ -3,11 +3,28 @@
 
 <head>
         <title>Edit Job</title>
+        <link rel="stylesheet" href="../styles/navbar.css">
         <link rel="stylesheet" type="text/css" href="../styles/add_edit_job.css">
         <script src="../scripts/edit_job.js" defer></script>
 </head>
 
 <body>
+
+        <nav class="navbar">
+                <div class="navbar-logo">
+                        <p>JOb Search</p>
+                </div>
+                <div class="navbar-items">
+                        <a href="AdminHome.html">Home</a>
+                        <a href="add job phase_1.html">Add Job</a>
+                        <a href="posted jobs.html">Posted Jobs</a>
+                </div>
+                <div class="navbar-buttons">
+                        <button onclick="window.location.href='sign up.html'">Sign Up</button>
+                        <button onclick="window.location.href='login.html'">Sign In</button>
+                </div>
+        </nav>
+
         <h1>Edit Job</h1>
         <form id="editJobForm">
                 <label for="jobTitle">Job Title:</label>

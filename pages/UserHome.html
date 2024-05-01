@@ -3,14 +3,15 @@
 
 <head>
 
+  <link rel="stylesheet" href="../styles/navbar.css">
   <link rel="stylesheet" href="../styles/user.css">
-
   <script src="../scripts/user.js" defer></script>
+
 </head>
 
 
 <body>
-  <header class="header"></header>
+  <!-- <header class="header"></header>
   <a href="#" class="logo">job search</a>
   <div class="navbar">
     <a href="UserHome.html">Home</a>
@@ -18,22 +19,50 @@
     <a href="login.html">Login</a>
     <a href="job_list.html" id="jobListLink">Job List</a>
     <a href="Applied Jobs.html">Applied Jobs</a>
+  </div> -->
+
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <p>JOb Search</p>
+    </div>
+    <div class="navbar-items">
+      <a href="AdminHome.html">Home</a>
+      <a href="job_list.html" id="jobListLink">Job List</a>
+      <a href="Applied Jobs.html">Applied Jobs</a>
+    </div>
+    <div class="navbar-buttons">
+      <button onclick="window.location.href='sign up.html'">Sign Up</button>
+      <button onclick="window.location.href='login.html'">Sign In</button>
+    </div>
+  </nav>
+
+  <div class="info">
+    <div class="content">
+
+      <h2>Welcome to our Job Search Website</h2>
+      <p>Find your dream job today!</p>
+
+      <select id="job-level" name="job-level">
+        <option value="Entry">Entry-Level</option>
+        <option value="junior">Junior</option>
+        <option value="Mid-level">Mid-level</option>
+        <option value="senior">Senior</option>
+        <option value="Expert">ُExpert</option>
+        <option value="Excutive">Excutive</option>
+      </select>
+
+      <input type="text" id="job-title" name="job-title" placeholder="Enter job title">
+
+      <button id="search-btn">Search</button>
+
+    </div>
+
+    <div id="img">
+      <img src="../images/img.jpeg" width="500" height="400" />
+    </div>
+
   </div>
 
-  <div class="content">
-    <h2>Welcome to our Job Search Website</h2>
-    <p>Find your dream job today!</p>
-    <select id="job-level" name="job-level">
-      <option value="Entry">Entry-Level</option>
-      <option value="junior">Junior</option>
-      <option value="Mid-level">Mid-level</option>
-      <option value="senior">Senior</option>
-      <option value="Expert">ُExpert</option>
-      <option value="Excutive">Excutive</option>
-    </select>
-    <input type="text" id="job-title" name="job-title" placeholder="Enter job title">
-    <button id="search-btn">Search</button>
-  </div>
 </body>
 
 </html>

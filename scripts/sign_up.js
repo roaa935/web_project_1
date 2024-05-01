@@ -5,6 +5,7 @@ function isValidEmail(email) {
     return emailPattern.test(email);
 }
 
+// function to check if the email is already exist befor
 function isExistEmail(email) {
 
     let users = JSON.parse(localStorage.getItem('users')) || [];
@@ -14,10 +15,27 @@ function isExistEmail(email) {
 
 }
 
-function isValidPassword(password, confirmPassword) {
-
-    return password == confirmPassword;
+// function for phone number validation
+function isValidPhoneNumber(phone) {
+    var phonePattern = /^\d{7,15}$/;
+    return phonePattern.test(phone);
 }
+
+function isValidPassword(password) {
+
+    return (password.length >= 8 && // 8 characters
+        /[A-Z]/.test(password) && // uppercase letter
+        /[a-z]/.test(password) && // lowercase letter
+        /\d/.test(password) && // digit
+        /[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]/.test(password)) // special character
+}
+
+
+function confirmPasswordValidation(password, confirmPassword) {
+    return password == confirmPassword;
+
+}
+
 
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -52,10 +70,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
             if (name == "" || email == "" || password == "" || confirmPassword == "") {
                 alert("Please fill in all fields.");
+
             } else if (!isValidEmail(email)) {
                 alert("Please enter a valid email address.");
-            } else if (!isValidPassword(password, confirmPassword)) {
+
+            } else if (isExistEmail(email)) {
+                alert("This Email is already exist");
+
+            } else if (!isValidPassword(password)) {
+                alert('The Password must contain at least 8 character, one upper case , one lower case, one digit, and one special character');
+
+            } else if (!confirmPasswordValidation(password, confirmPassword)) {
                 alert("Confirm Password does not match.");
+
             } else if (isExistEmail(email)) {
                 alert("This Email is already exist");
 
@@ -73,22 +100,38 @@ document.addEventListener('DOMContentLoaded', function () {
                     let companyDescription = document.getElementById('company-description').value;
                     let companyAddress = document.getElementById('company-address').value;
 
-                    newUser = {
-                        id: users.length == 0 ? 1 : users[users.length - 1].id + 1,
-                        name: name,
-                        email: email,
-                        password: password,
-                        company: {
-                            name: companyName,
-                            phone: companyPhone,
-                            email: companyEmail,
-                            address: companyAddress,
-                            description: companyDescription,
-                            logo: 'https://www.mintformations.co.uk/blog/wp-content/uploads/2020/05/shutterstock_583717939.jpg',
-                        },
-                        postedJobs: [],
-                        isAdmin: true,
+                    // Check if any company info fields are empty
+                    if (companyName === "" || companyPhone === "" || companyEmail === "" || companyDescription === "" || companyAddress === "") {
+                        alert("Please fill in all company information fields.");
                     }
+
+                    else if (!isValidEmail(companyEmail)) {
+                        alert("Please enter a valid company email address.");
+                    }
+
+                    else if (!isValidPhoneNumber(companyPhone)) {
+                        alert("Please enter a valid company phone number (7 to 15 digits).");
+                    } else {
+
+                        newUser = {
+                            id: users.length == 0 ? 1 : users[users.length - 1].id + 1,
+                            name: name,
+                            email: email,
+                            password: password,
+                            company: {
+                                name: companyName,
+                                phone: companyPhone,
+                                email: companyEmail,
+                                address: companyAddress,
+                                description: companyDescription,
+                                logo: 'https://www.mintformations.co.uk/blog/wp-content/uploads/2020/05/shutterstock_583717939.jpg',
+                            },
+                            postedJobs: [],
+                            isAdmin: true,
+                        }
+                    }
+
+
                 } else {
                     newUser = {
                         id: users.length == 0 ? 1 : users[users.length - 1].id + 1,

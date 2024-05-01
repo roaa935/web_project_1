@@ -2,18 +2,31 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
+
     <title>job list </title>
-
+    <link rel="stylesheet" href="../styles/navbar.css">
     <link rel="stylesheet" href="../styles/applied_jobs.css">
-
     <script src="../scripts/applied_jobs.js"></script>
-
-
 
 </head>
 
 <body>
+
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <p>JOb Search</p>
+        </div>
+        <div class="navbar-items">
+            <a href="AdminHome.html">Home</a>
+            <a href="job_list.html" id="jobListLink">Job List</a>
+            <a href="Applied Jobs.html">Applied Jobs</a>
+        </div>
+        <div class="navbar-buttons">
+            <button onclick="window.location.href='sign up.html'">Sign Up</button>
+            <button onclick="window.location.href='login.html'">Sign In</button>
+        </div>
+    </nav>
+
     <div class="image-container">
         <div class="overlay"></div>
         <h1>Applied Jobs</h1>

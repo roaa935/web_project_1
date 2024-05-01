@@ -68,7 +68,6 @@ function getAdminById(id) {
 }
 
 
-
 // function to create the job card (for User)
 function createJobCard(job) {
     // Create job card dynamically
@@ -165,7 +164,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // check first if the user search for something or not
     const isSearch = JSON.parse(sessionStorage.getItem('isSearch'));
-    console.log(isSearch);
+    //console.log(isSearch);
 
 
     if (isSearch) {

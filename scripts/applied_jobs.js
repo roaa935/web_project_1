@@ -104,15 +104,15 @@ function createJobCard(job) {
 
         // update the job application list of the job
         let postedJobs = JSON.parse(localStorage.getItem('postedJobs'));
-        console.log(postedJobs);
+        //console.log(postedJobs);
         let jobToEdit = postedJobs.find(j => j.id == job.id);
-        console.log(jobToEdit);
+        //console.log(jobToEdit);
         let jobApplications = jobToEdit.jobApplications;
-        console.log(jobApplications);
+        //.log(jobApplications);
         jobToEdit.jobApplications = jobApplications.filter(applicant => applicant.applicantId != currentUserId);
-        console.log(jobToEdit.jobApplications);
+        //console.log(jobToEdit.jobApplications);
         localStorage.setItem('postedJobs', JSON.stringify(postedJobs));
-        console.log(postedJobs);
+        //console.log(postedJobs);
 
         alert('Your Job Application Canceled Successfully');
 

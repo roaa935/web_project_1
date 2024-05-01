@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             if (foundUser) {
                 localStorage.setItem('currentUserId', foundUser.id);
-                console.log('Login successful with User ID: ' + foundUser.id);
+                // console.log('Login successful with User ID: ' + foundUser.id);
                 alert('Login successful with User ID: ' + foundUser.id);
 
                 if (foundUser.isAdmin) {
@@ -31,4 +31,5 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     });
+
 });
